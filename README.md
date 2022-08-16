@@ -1,1 +1,1 @@
-### This is Netflix clome
+### This is Netflix clone
