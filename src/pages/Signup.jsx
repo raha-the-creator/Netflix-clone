@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
 
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { user, signUp } = UserAuth();
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await signUp(email, password);
+      navigate('/')
     } catch (error) {
       console.log(error);
     }
@@ -31,7 +32,7 @@ const Signup = () => {
             <div className='max-w-[320px] mx-auto py-16'>
               <h1 className='text-3xl font-bold'>Sign Up</h1>
               <form 
-                onSubmit={handleSubmit} 
+                onSubmit={ handleSubmit } 
                 className='w-full flex flex-col py-4'
               >
                 <input 

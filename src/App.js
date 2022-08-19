@@ -7,6 +7,7 @@ import Signup from "./pages/Signup";
 import Account from "./pages/Account";
 
 function App() {
+  console.log();
   return (
     <>
       <AuthContextProvider>
