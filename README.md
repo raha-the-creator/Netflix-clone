@@ -1,1 +1,1 @@
-### This is Netflix clone
+### This is Netflix clone using React + Firebase
